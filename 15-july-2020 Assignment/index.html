@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Day 2</title>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Assignment Questions for Day 2</h1>
+    <h3>Question 1</h3>
+    <p>Write a js code which takes input from the user and logs it in the console.</p>
+
+    <code>let name = prompt("What is your name")<br>
+
+        console.log(name);</code>
+    
+    <h3>Question 2</h3>
+    <p>Explain with examples the remaining methods of String and Array</p>
+    <p>
+        <b>String methods</b>
+        <br><br><em>length</em> // The length property returns the length of a string<br><br>
+        <code>var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br>
+            var sln = txt.length;
+        </code><br><br>
+        <em>indexOf()</em> // The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string<br><br>
+        <code>var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br>
+            var sln = txt.length;
+        </code><br><br>
+        <em>lastIndexOf()</em> // method returns the index of the last occurrence of a specified text in a string<br><br>
+        <code>var str = "Please locate where 'locate' occurs!";<br>
+            var pos = str.lastIndexOf("John");
+        </code><br><br>
+        <em>slice()</em> // slice() extracts a part of a string and returns the extracted part in a new string.<br>
+
+        The method takes 2 parameters: the start position, and the end position (end not included).<br><br>
+        <code>var str = "Apple, Banana, Kiwi";<br
+            var res = str.slice(7, 13);
+        </code><br><br>
+        <b>Array methods</b>
+        <br><br><em>pop()</em> // The pop method removes the last element fro an arrays<br><br>
+        <code>var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+            fruits.pop(); 
+        </code><br><br>
+        <em>push()</em> //The push method adds an element to an array in the end<br><br>
+        <code>var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+            fruits.push("Kiwi");
+        </code><br><br>
+        <em>shift()</em> // method method removes first element of array and shifts other elements to left<br><br>
+        <code>var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+            fruits.shift();  
+        </code><br><br>
+        <em>unshift()</em> //method adds a new element to array but this thime it adds it in front of the Array<br>
+
+        The method takes 2 parameters: the start position, and the end position (end not included).<br><br>
+        <code>var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+            fruits.unshift("Lemon");  
+        </code><br><br>
+        
+    </p>
+    <mark>Optional Assignment 3</mark>
+    <h3>Question 3</h3>
+    <p>Ask the user if he is 21+ and log the value "Can drink", "Cannot Drink"</p>
+    <code>
+        let bol = confirm("Are you 21+")<br><br>
+
+        if(bol==true){<br><br>
+            console.log("Can Drink")<br><br>
+        }<br><br>
+        else{<br><br>
+            console.log("Can't Drink")<br><br>
+        }
+    </code>
+</body>
