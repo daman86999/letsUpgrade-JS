@@ -31,7 +31,10 @@ else{
 }
 
 
-//ternary
+//Switch or ternary
 
 let grade = (marks>=90) ? 'Grade : A':
             (marks<90 && marks>=50) ? 'Grade : B':
+            'Grade : C';
+
+console.log(grade)
