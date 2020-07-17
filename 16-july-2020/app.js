@@ -15,6 +15,11 @@ var ans = function(a){
 ans(a)
 
 //q2
+let x = prompt("Enter os name and version with space saperation");
+
+let y =  x.split(" ")
+
+console.log(`Os name is ${y[0]} and version is ${y[1]}`)
 
 //q3
 let marks = prompt("Enter marks .. : ")
