@@ -32,6 +32,26 @@
     <h3>Q3. Write a program to take marks as input from the user and grade him accordingly. Use Conditional statements. Also the same code using switch or ternary<br>
     </h3>
                 <code><br>
+                    
+
+if(marks>=90){<br>
+    console.log("Grade : A")<br>
+}
+else if(marks<90 && marks>=50){<br>
+    console.log("Grade : B")<br>
+}<br>
+else{<br>
+    console.log("Grade : C")<br>
+}<br>
+
+
+//Switch or ternary
+
+let grade = (marks>=90) ? 'Grade : A':<br>
+            (marks<90 && marks>=50) ? 'Grade : B':<br>
+            'Grade : C';<br>
+
+console.log(grade)<br>
                 </code>
                  
 </body>
