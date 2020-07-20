@@ -2,6 +2,8 @@
 
 
 
+document.getElementById("bt1").onclick = function () {
+   
 for (let i = 0; i<101 ; i++){
     if (i%3==0){
         console.log(`multiple is ${i}. Printing 'fizz' because it is multiple of 3.`);
@@ -14,10 +16,11 @@ for (let i = 0; i<101 ; i++){
         console.log(`multiple is ${i}. Printing 'fizzbuzz' because it is  multiple of 3 and 5.`);
     }
 }
+}
 
 
 //q2
-
+document.getElementById("bt2").onclick = function () {
 const student = {
     name: "Helsinki",
     age: 24,
@@ -36,12 +39,12 @@ const student = {
   console.log({ name, age });
   // showing the values
   console.log(name, age, diceGame);
-
+}
 
   //q3
 
 
-
+  document.getElementById("bt3").onclick = function () {
   shoppingList = ["Apple","Banana","Orange","Grapes"];
   
   console.log("shoppingList:", shoppingList);
@@ -56,11 +59,10 @@ const student = {
   shoppingBasket.push("Papad");
   
   console.log("shoppingBasket:", shoppingBasket);
-
-
+  }
   //q5
-  document.getElementById("btx").onclick = function () {
-    let sales = document.getElementById("salesid").value;
+  document.getElementById("bt5").onclick = function () {
+    let sales = prompt("Enter sales : ");
     let comm;
     switch (true) {
       case sales >= 0 && sales < 5001:
@@ -78,13 +80,13 @@ const student = {
     }
     document.getElementById("netcomm").innerHTML =
       "Net Commision Rs.:&nbsp &nbsp" + comm;
-  }
+  };
 
 
   //q6
-  document.getElementById("btg").onclick = function () {
+  document.getElementById("bt6").onclick = function () {
   while (!false) {
-    let num = document.getElementById("nb");
+    let num = prompt("Enter number less than 101 or it will not end until you press cancel");
     if (num < 101) {
       console.log("Number: " + num);
       break;
@@ -95,4 +97,50 @@ const student = {
     }
   }
  
+};
+
+
+//q7
+
+document.getElementById("bt7").onclick = function () {
+    let start = Number(prompt("Starting number of the range :"));
+    let end = Number(prompt("Ending number of the range:  "));
+  
+    for (j = start; j <= end; j++) {
+      if (j == 1) {
+        continue;
+      }
+      flag = 1;
+      for (i = 2; i <= j / 2; ++i) {
+        if (j % i == 0) {
+          flag = 0;
+          break;
+        }
+      }
+      if (flag == 1) {
+        console.log(j);
+      }
+    }
+};
+
+
+//q8
+
+document.getElementById("bt8").onclick = function () {
+    
+ask = (question, yes, no) => {
+    if (confirm(question)) yes();
+    else no();
+  };
+  
+  ask(
+    "Do you agree?",
+    function () {
+      alert("You agreed.");
+    },
+    function () {
+      alert("You canceled the execution.");
+    }
+  );
+  
 }

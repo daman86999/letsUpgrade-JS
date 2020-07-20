@@ -10,10 +10,12 @@
     <h1>Day 4 Assignment  </h1>
     <h3>Q1. Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and
         "fizzbuzz" at multiples of 3 and 5. <br>
-        </h3>
+        </h3><input id="bt1" type="button" value="click here to see in console"><br>
             <code><br>
                 //q1
                 <br>|
+                document.getElementById("bt1").onclick = function () {<br>|
+   
                 for (let i = 0; i<101 ; i++){<br>|
                     if (i%3==0){<br>|
                         console.log(`multiple is ${i}. Printing 'fizz' because it is multiple of 3.`);<br>|
@@ -26,6 +28,7 @@
                         console.log(`multiple is ${i}. Printing 'fizzbuzz' because it is  multiple of 3 and 5.`);<br>|
                     }<br>|
                 }<br>|
+            }<br>|
   
             </code>
     <h3>Q2. Destructure the following object:<br>
@@ -36,10 +39,11 @@
                 &nbsp;&nbsp;diceGame: "Two player dice game using JavaScript",<br>
             &nbsp;},<br>
         }; <br>
-        </h3>
+        </h3><input id="bt2" type="button" value="click here to see in console"><br>
             <code><br>
                 //q2
                 <br>|
+                document.getElementById("bt2").onclick = function () {<br>|
                   let {<br>|
                     name,<br>|
                     age,<br>|
@@ -50,14 +54,15 @@
                   console.log({ name, age });<br>|
                   // showing the values<br>|
                   console.log(name, age, diceGame);<br>|
+                }<br>|
   
             </code>
     <h3>Q3. Imagine you are going out to do some grocery shopping.So you have an array called shoppingList with all the products you want to buy.
     Now that you are inside of the shop, you have a basket with all the products from your list, but you want toadd a few more.Create a new array called shoppingBasket, that will be a copy of the shoppingList array, and add somenew products into it.<br>
-        </h3>
+        </h3><input id="bt3" type="button" value="click here to see in console"><br>
             <code><br>
                 //q3<br>|
-               
+                document.getElementById("bt3").onclick = function () {<br>|
                 shoppingList = ["Apple","Banana","Orange","Grapes"];<br>|
   
                 console.log("shoppingList:", shoppingList);<br>|
@@ -71,7 +76,8 @@
                 ];
                 shoppingBasket.push("Papad");<br>|
                 
-                console.log("shoppingBasket:", shoppingBasket);<br>
+                console.log("shoppingBasket:", shoppingBasket);<br>|
+            }<br>|
             </code>
     <h3>Q4. :Make a Calculator in Javascript which can do operations as Addtion, Subtraction, Multiplication, Division,Square root, Percentage.  <br>
         </h3>
@@ -138,8 +144,8 @@
          4. Above 20000 : 10% Then log the total commission earned by him. <br>
         </h3>
 
-        Sales in Rs.: <input id="salesid" type='number'><br /><br />
-        <input id="btx" type="button" value="Calculate commision" />
+        Sales in Rs.: 
+        <input id="bt5" type="button" value="Click here to enter" />
         <p id="netcomm"></p>
     </div>
 
@@ -171,14 +177,14 @@
     The loop must ask for a number until either the visitor enters a number greater than 100 or cancels the input/enters an empty line.
     Here we can assume that the visitor only inputs numbers. There’s no need to implement a specialhandling for a non-numeric input in this task. <br>
         </h3>
-        Enter a number : <input id="nb" type='number'><br><br>
-        <input id="btg" type="button" value="Calculate" />
+        Enter a number :  <input id="bt6" type="button" value="click here">
+        
         
             <code><br><br>
                 //q6<br><br>|
                 
                 while (!false) {<br>|
-                    let num = document.getElementById("pb").<br>|
+                    let num = prompt("Enter number less than 101 or it will not end until you press cancel");<br>|
                     if (num < 101) {<br>|
                       console.log("Number: " + num);
                       break;<br>|
@@ -190,44 +196,60 @@
                 
   
             </code>
-    <h3>Q7. prime numbers between interval <br>
+    <h3>Q7. prime numbers between given interval <br>
         </h3>
-            <code><br>
-                //q1
-                console.log('Answer 1');<br><br>
-                for (let i = 0; i<101 ; i++){<br>
-                    if (i%3==0){<br>
-                        console.log(`multiple is ${i}. Printing 'fizz' because it is multiple of 3.`);<br>
-                    }<br>
-                    if (i%5==0) {<br>
-                        console.log(`multiple is ${i}. Printing 'buzz' because it is multiple of 5.`);<br>
-                
-                    }<br>
-                    if (i%5==0 && i%3==0) {<br>
-                        console.log(`multiple is ${i}. Printing 'fizzbuzz' because it is  multiple of 3 and 5.`);<br>
-                    }<br>
-                }<br>
-  
+        <input id="bt7" type="button" value="click here to start">
+            <code><br><br>
+                //q7<br>|
+                document.getElementById("bty").onclick = function () {<br>|
+                    let start = Number(prompt("Starting number of the range :"));<br>|
+                    let end = Number(prompt("Ending number of the range:  "));<br>|
+                  
+                    for (j = start; j <= end; j++) {<br>|
+                      if (j == 1) {<br>|
+                        continue;<br>|
+                      }<br>|
+                      flag = 1;<br>|
+                      for (i = 2; i <= j / 2; ++i) {<br>|
+                        if (j % i == 0) {<br>|
+                          flag = 0;<br>|
+                          break;<br>|
+                        }<br>|
+                      }<br>|
+                      if (flag == 1) {<br>|
+                        console.log(j);<br>|
+                      }<br>|
+                    }<br>|
+                };<br>|
             </code>
 
-<h3>Q8. Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and
-        "fizzbuzz" at multiples of 3 and 5. <br>
+<h3>Q8. Replace Function Expressions with arrow functions in the code below:<br>
+     function ask(question, yes, no) {<br>
+       if (confirm(question)) yes()<br>
+       else no()<br>
+    } <br>
         </h3>
+        <input id="bt8" type="button" value="click here to start">
             <code><br>
-                //q1
-                console.log('Answer 1');<br><br>
-                for (let i = 0; i<101 ; i++){<br>
-                    if (i%3==0){<br>
-                        console.log(`multiple is ${i}. Printing 'fizz' because it is multiple of 3.`);<br>
-                    }<br>
-                    if (i%5==0) {<br>
-                        console.log(`multiple is ${i}. Printing 'buzz' because it is multiple of 5.`);<br>
-                
-                    }<br>
-                    if (i%5==0 && i%3==0) {<br>
-                        console.log(`multiple is ${i}. Printing 'fizzbuzz' because it is  multiple of 3 and 5.`);<br>
-                    }<br>
-                }<br>
+                //q8<br><br>|
+                document.getElementById("btz").onclick = function () {<br>|
+    
+                    ask = (question, yes, no) => {<br>|
+                        if (confirm(question)) yes();<br>|
+                        else no();<br>|
+                      };<br>|
+                      
+                      ask(<br>|
+                        "Do you agree?",<br>|
+                        function () {<br>|
+                          alert("You agreed.");<br>|
+                        },<br>|
+                        function () {<br>|
+                          alert("You canceled the execution.");<br>|
+                        }<br>|
+                      );<br>|
+                      
+                    }<br>|
   
             </code>
 <script src="app.js"></script>
