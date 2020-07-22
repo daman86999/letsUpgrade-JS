@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day6 Assignment</title>
-    <script src="app.js"></script>
+    
 </head>
 <body>
 <h2>Day 6 Assignment</h2>
@@ -23,15 +23,46 @@
 <h3>Q2. Write a program that will display the multiplication table of a number on the webpage in a proper format. Take the input from user.</h3><input id="bt2" type="button" value="click here to execute"><br>
 <p id="table"></p>
 <code><br>
-    //q1 <br>|
-        var colour = ["blue ", "orange", "yellow","green","red"];<br>|
-        var index = 0;  <br>|
-        function changeBGColor(){<br>|
-        document.bgColor = colour[index];<br>|
-        index = (index + 1) % colour.length;<br>|
-        setTimeout(changeBGColor, 5000);<br>|
-}  
+    //q2<br>|
+    document.getElementById("bt2").onclick = function (){<br>|
+
+        var number = Number(prompt("Enter any number ...."));<br>|
+        var outputL = "";<br>|
+        var output = "";<br>|
+        let i=0 ;<br>|
+        while(i<=10){<br>|
+            output = number * i;<br>|
+            outputL +=number + " * " +i+" = " +output +" br" <br>|
+            i++;<br>|
+        }
+        document.getElementById("table").innerHTML= (outputL);<br>|
     
+    }<br>|
+
 </code>
+<h3>Q3. Make a webpage that will ask the name of thw user. Then will display a welcome message on the screen . Also the webpage should also have a clock.<br>Using the toggle method of classList adda a dark mode feature to a website.</h3><input id="bt3" type="button" value="click here to execute"><br>
+<p id="table"></p>
+<code><br>
+    //q2<br>|
+    document.getElementById("bt2").onclick = function (){<br>|
+
+        var number = Number(prompt("Enter any number ...."));<br>|
+        var outputL = "";<br>|
+        var output = "";<br>|
+        let i=0 ;<br>|
+        while(i<=10){<br>|
+            output = number * i;<br>|
+            outputL +=number + " * " +i+" = " +output +" br" <br>|
+            i++;<br>|
+        }
+        document.getElementById("table").innerHTML= (outputL);<br>|
+    
+    }<br>|
+
+</code>
+
+
+
+<script src="app.js"></script>   
 </body>
 </html>

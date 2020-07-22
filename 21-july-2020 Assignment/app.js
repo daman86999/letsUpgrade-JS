@@ -13,6 +13,12 @@ document.getElementById("bt2").onclick = function (){
     var number = Number(prompt("Enter any number ...."));
     var outputL = "";
     var output = "";
-    let i=0
+    let i=0 ;
+    while(i<=10){
+        output = number * i;
+        outputL +=number + " * " +i+" = " +output +" <br/>" 
+        i++;
+    }
+    document.getElementById("table").innerHTML= (outputL);
 
 }
