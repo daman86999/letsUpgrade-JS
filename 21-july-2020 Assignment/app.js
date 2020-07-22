@@ -22,3 +22,25 @@ document.getElementById("bt2").onclick = function (){
     document.getElementById("table").innerHTML= (outputL);
 
 }
+
+
+//q3
+
+function myFunction() {
+    document.getElementById("bdy").classList.toggle("darkbody");
+    
+    document.getElementById("btn").classList.toggle("darkbtn");
+
+}
+const ctime = document.getElementById('time');
+function clock() {
+    let date = new Date();
+    let time = date.toLocaleTimeString();
+    ctime.innerText = time;
+}
+setInterval(clock, 1000);
+document.getElementById("bt3").onclick = function (){
+var name = prompt("Enter your name");
+name = name.toUpperCase();
+wlcmMsg.innerHTML += `WELCOME ${name}`;
+}

@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day6 Assignment</title>
-    
+    <style>
+        .darkbody {
+            background-color: #2c2b2b;
+            color: white;
+
+        }
+
+        .darkbtn {
+            background-color: rgb(50, 200, 219);
+            color: white;
+
+        }
+    </style>
 </head>
-<body>
+<body id="bdy">
 <h2>Day 6 Assignment</h2>
 <h3>Q1. Write a program that will iterate over an array of colors and change the background of the page after 5 sec</h3><input id="bt1" type="button" value="click here to execute" onclick="changeBGColor()"><br>
 <code><br>
@@ -40,29 +52,37 @@
     }<br>|
 
 </code>
-<h3>Q3. Make a webpage that will ask the name of thw user. Then will display a welcome message on the screen . Also the webpage should also have a clock.<br>Using the toggle method of classList adda a dark mode feature to a website.</h3><input id="bt3" type="button" value="click here to execute"><br>
-<p id="table"></p>
+<h3>Q3. Make a webpage that will ask the name of thw user. Then will display a welcome message on the screen . Also the webpage should also have a clock.<br>Using the toggle method of classList add  a dark mode feature to a website.</h3>
+<input id="bt3" type="button" value="click here to execute welcome message"><br>
+<h4 id="wlcmMsg"></h4>
+<p id="para1">DARK MODE TOGGLE  <button id="btn" type="button" onclick="myFunction()">CLICK ME!!</button></p>
+
+<p id="time"></p>
+
 <code><br>
-    //q2<br>|
-    document.getElementById("bt2").onclick = function (){<br>|
-
-        var number = Number(prompt("Enter any number ...."));<br>|
-        var outputL = "";<br>|
-        var output = "";<br>|
-        let i=0 ;<br>|
-        while(i<=10){<br>|
-            output = number * i;<br>|
-            outputL +=number + " * " +i+" = " +output +" br" <br>|
-            i++;<br>|
-        }
-        document.getElementById("table").innerHTML= (outputL);<br>|
+    //q3<br>|
     
-    }<br>|
+        function myFunction() {<br>|
+            document.getElementById("bdy").classList.toggle("darkbody");<br>|
+            
+            document.getElementById("btn").classList.toggle("darkbtn");<br>|
 
+        }<br>|
+        const ctime = document.getElementById('time');<br>|
+        function clock() {<br>|
+            let date = new Date();<br>|
+            let time = date.toLocalTimeString();<br>|
+            ctime.innerText = time;<br>|
+        }<br>|
+        setInterval(clock, 1000);<br>|
+        document.getElementById("bt3").onclick = function (){<br>|
+        var name = prompt("Enter your name");<br>|
+        name = name.toUpperCase();<br>|
+        wlcmMsg.innerHTML += `WELCOME ${name}`;<br>|
+        }<br>|
+
+    
 </code>
-
-
-
 <script src="app.js"></script>   
 </body>
 </html>
