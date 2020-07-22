@@ -8,7 +8,20 @@
 </head>
 <body>
 <h2>Day 6 Assignment</h2>
-<h3>Q1. Write a program tht will iterate over an array of colors and change the background of the page after 5 sec</h3><input id="bt1" type="button" value="click here to execute" onclick="changeBGColor()"><br>
+<h3>Q1. Write a program that will iterate over an array of colors and change the background of the page after 5 sec</h3><input id="bt1" type="button" value="click here to execute" onclick="changeBGColor()"><br>
+<code><br>
+    //q1 <br>|
+        var colour = ["blue ", "orange", "yellow","green","red"];<br>|
+        var index = 0;  <br>|
+        function changeBGColor(){<br>|
+        document.bgColor = colour[index];<br>|
+        index = (index + 1) % colour.length;<br>|
+        setTimeout(changeBGColor, 5000);<br>|
+}  
+    
+</code>
+<h3>Q2. Write a program that will display the multiplication table of a number on the webpage in a proper format. Take the input from user.</h3><input id="bt2" type="button" value="click here to execute"><br>
+<p id="table"></p>
 <code><br>
     //q1 <br>|
         var colour = ["blue ", "orange", "yellow","green","red"];<br>|

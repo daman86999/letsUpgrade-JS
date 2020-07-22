@@ -5,3 +5,14 @@ function changeBGColor(){
         index = (index + 1) % colour.length;
         setTimeout(changeBGColor, 5000);
 }   
+
+//q2
+
+document.getElementById("bt2").onclick = function (){
+
+    var number = Number(prompt("Enter any number ...."));
+    var outputL = "";
+    var output = "";
+    let i=0
+
+}
