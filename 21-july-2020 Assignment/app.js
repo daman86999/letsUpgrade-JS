@@ -1,10 +1,17 @@
-var colour = ["blue ", "orange", "yellow","green","red"];
+var colour = [ "orange", "yellow","pink","cyan","red"];
 var index = 0;  
+
+var z;
 function changeBGColor(){
         document.bgColor = colour[index];
         index = (index + 1) % colour.length;
-        setTimeout(changeBGColor, 5000);
-}   
+        z=setTimeout(changeBGColor, 5000);
+}
+
+function stop(){
+    clearTimeout(z);
+    document.bgColor = "white";
+}
 
 //q2
 
