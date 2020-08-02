@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image:url(images/willian-justen-de-vasconcellos-_MMP5j_fCqw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+
+.container{
+    -1px 0px 2px #787575;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+h1{
+    color: #fff;
+    font-size: 3rem;
+    text-shadow: 4px 4px  #787575;
+}
+
+.todo-form{
+    margin: 40px 0px;
+}
+
+.todo-input {
+    width: 250px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 12px;
+    margin-right: 15px;
+    font-size: 1rem;
+}
+
+.add-button{
+    color: #fff;
+    background-color: indianred;
+    border: none;
+    outline: none;
+    padding: 9px;
+    border-radius: 7px;
+    font-size: 1.2rem;
+}
+
+.todo-items{
+   
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12)
+        ;
+
+    min-height: 200px;
+    width: 38vw;
+    border-radius: 5px;
+    
+}
+
+.item{ 
+    font-size: 1.5rem;
+    padding: 10px ;
+}
+
+.item:after{
+    content:"";
+    display: block;
+    margin: 0 auto 0;
+    width: 95%;
+    padding-top: 20px;
+    border-bottom: 1px solid #7875756b ;
+}
+
+.checkbox{
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+input.checkbox{
+    transform: scale(1.4);
+}
+
+.task-name{
+    color: indianred;
+    margin-left: 10px;
+}
+
+.delete-button{
+    float: right;
+    height: 40px;
+    position: relative;
+    top: -5px;
+    cursor: pointer;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .todo-items{
+        min-height: 180px;
+        width: 65vw;
+        border-radius: 5px; 
+    }
+    .item:after{
+        content:"";
+        display: block;
+        margin: 0  auto 0;
+        width: 93%;
+        padding-top: 20px;
+        border-bottom: 1px solid #78757546 ;
+    }
+  }
