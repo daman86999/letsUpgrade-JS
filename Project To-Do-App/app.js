@@ -36,7 +36,7 @@ function addTodo(item) {
 }
 
 
-function renderTodos(todos) {
+function printTodos(todos) {
   
   todoItemsList.innerHTML = '';
 
@@ -79,7 +79,7 @@ function addToLocalStorage(todos) {
   
   localStorage.setItem('todos', JSON.stringify(todos));
   
-  renderTodos(todos);
+  printTodos(todos);
 }
 
 
@@ -89,7 +89,7 @@ function getFromLocalStorage() {
   if (reference) {
     
     todos = JSON.parse(reference);
-    renderTodos(todos);
+    printTodos(todos);
   }
 }
 
